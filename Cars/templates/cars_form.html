@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{%block content%}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="{% static "css/form.css"%}">
+</head>
+<body>
+    <main class="container">
+
+        <form method="POST" class="" enctype="multipart/form-data">
+            <h1>Cadastro de Carros</h1>
+
+            {% csrf_token %}
+
+            {{ form }}
+
+            <input type="submit" value="Salvar" class="botão">
+        </form>
+
+    </main>
+</body>
+</html>
+{% endblock %}
+
+{% comment %} class="btn btn-primaly" {% endcomment %}

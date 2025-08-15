@@ -1,0 +1,36 @@
+{% load static %}
+<!Doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TWTCcarros</title>
+    <link rel="stylesheet" href="{% static "css/base.css"%}">
+    <link rel="stylesheet" href="{% static "css/style.css"%}">
+  </head>
+  <body>
+    <nav>
+        <div class="config">
+            <a href="{% url 'cars_view' %}">Carros</a>
+            <a href="{% url 'form_view' %}">Cadastrar</a>
+        </div>
+
+        <form method="GET" action="{% url 'cars_view' %}">
+            <input type="text" name="search" placeholder="Buscar carro...">
+            <button type="submit">Buscar</button>
+        </form>
+    </nav>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <b>
+            &copy; Élaff Ramos | 2025
+        </b>
+    </footer>
+
+  </body>
+</html>

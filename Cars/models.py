@@ -13,7 +13,7 @@ class Car(models.Model):
     brand = models.ForeignKey(Brand, on_delete=models.PROTECT, related_name='car_brand', verbose_name='Marca')
     factory_year = models.IntegerField(blank=True, null=True, verbose_name='Ano de fabricação')
     model_year = models.IntegerField(blank=True, null=True, verbose_name='Ano do modelo')
-    value = models.DecimalField(max_digits=6, decimal_places=3, default=0, blank=True, null=True, verbose_name='Preço')
+    value = models.DecimalField(max_digits=10, decimal_places=2, default=0, blank=True, null=True, verbose_name='Preço')
     photo = models.ImageField(upload_to='cars/', blank=False, null=False, verbose_name='Foto')
 
     def __str__(self):

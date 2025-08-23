@@ -8,20 +8,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
-    <link rel="stylesheet" href="{% static "css/form.css"%}">
+    <link rel="stylesheet" href="{% static 'css/form.css' %}?v=2">
 </head>
 <body>
     <main class="container">
+        <form method="post" enctype="multipart/form-data" class="form">
 
-        <form method="POST" class="" enctype="multipart/form-data">
-            <h1>Cadastro de Carros</h1>
-
+            <h1>Cadastro de Carros</h1> <br>
             {% csrf_token %}
 
-            {{ form }}
-
-            <input type="submit" value="Salvar" class="botão">
+            <div class="campo">
+                {{ form.model.label_tag }}
+                {{ form.model }}
+            </div>
+            <br>
+            <div class="campo">
+                {{ form.brand.label_tag }}
+                {{ form.brand }}
+            </div>
+            <br>
+            <div class="campo">
+                {{ form.factory_year.label_tag }}
+                {{ form.factory_year }}
+            </div>
+            <br>
+            <div class="campo">
+                {{ form.model_year.label_tag }}
+                {{ form.model_year }}
+            </div>
+            <br>
+            <div class="campo">
+                {{ form.value.label_tag }}
+                {{ form.value }}
+            </div>
+            <br>
+            <div class="campo">
+                {{ form.photo.label_tag }}
+                {{ form.photo }}
+            </div>
+            <br>
+            <button type="submit">Cadastrar</button>
         </form>
+
 
     </main>
 </body>

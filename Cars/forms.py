@@ -1,17 +1,18 @@
 from django import forms
 from .models import Car
-
 class Formulario(forms.ModelForm):
     class Meta:
         model = Car
         fields = '__all__'
         widgets = {
-            'nome': forms.TextInput(attrs={'class': 'meu-input'}),
-            'marca': forms.TextInput(attrs={'class': 'meu-input'}),
-            'ano': forms.NumberInput(attrs={'class': 'meu-input'}),
-            'value': forms.NumberInput(attrs={'class': 'meu-input'}),
-            'imagem': forms.FileInput(attrs={'class': 'meu-input-arquivo'}),
+            'model': forms.TextInput(attrs={'class': 'input-modelo'}),
+            'brand': forms.Select(attrs={'class': 'input-marca'}),
+            'factory_year': forms.NumberInput(attrs={'class': 'input-ano-fabricacao'}),
+            'model_year': forms.NumberInput(attrs={'class': 'input-ano-modelo'}),
+            'value': forms.NumberInput(attrs={'class': 'input-preco'}),
+            'photo': forms.FileInput(attrs={'class': 'input-foto'}),
         }
+
 
     def clean_value(self):
         value = self.cleaned_data.get('value')

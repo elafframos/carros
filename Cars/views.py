@@ -8,7 +8,7 @@ def cars_view(request):
     search = request.GET.get('search')
 
     if search:
-        car = Car.objects.filter(model__contains= search)
+        car = Car.objects.filter(model__icontains=search)
     return render(request, 'cars.html', {'car': car})
 
 def form_view(request):

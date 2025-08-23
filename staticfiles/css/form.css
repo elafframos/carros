@@ -5,7 +5,7 @@
 }
 
 body{
-    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    background: linear-gradient(to top, #0077b6 0%, #0096c7 100%);
     color: #fff;
     font: italic;
 }
@@ -23,10 +23,22 @@ nav {
     color: #fff;
 }
 
-form{
+main{
+  display: flex;
+  justify-content: center;
+}
+
+.form{
     display: block;
     justify-items: center;
     text-align: center;
+    border: 1px solid ;
+    padding: 20px;
+    width: 30%;
+    height: 70%;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255,255,255,0.2);
+    backdrop-filter: blur(6px);
 }
 
 .botão{
@@ -39,8 +51,33 @@ form{
     opacity: 0.7;
 }
 
-.meu-input{
-    display: none;
-    padding: 0;
-    width: 100px;
+.input-modelo {
+  width: 200px;
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.input-marca {
+  width: 200px;
+  background-color: #f9f9f9;
+  border: 1px solid #666;
+  padding: 6px;
+}
+
+.input-ano-fabricacao,
+.input-ano-modelo {
+  width: 200px;
+  padding: 10px;
+}
+
+.input-preco {
+  font-weight: bold;
+  color: green;
+  border: 2px solid green;
+  padding: 10px;
+}
+
+.input-foto {
+  border: none;
 }

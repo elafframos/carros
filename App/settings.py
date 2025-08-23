@@ -129,11 +129,6 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
 
-MIDDLEWARE = [
-    "whitenoise.middleware.WhiteNoiseMiddleware",
-    *MIDDLEWARE,  # mantém o restante
-]
-
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"

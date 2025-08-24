@@ -4,9 +4,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>TWTCcarros</title>
-    <link rel="stylesheet" href="{% static "css/base.css"%}">
-    <link rel="stylesheet" href="{% static "css/style.css"%}">
+    <title>Carros</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}?v2">
+
+    {% block extra_css %}{% endblock %}
   </head>
   <body>
     <nav>
@@ -22,8 +24,7 @@
     </nav>
 
     <main>
-        {% block content %}
-        {% endblock %}
+        {% block content %}{% endblock %}
     </main>
 
     <footer>
@@ -31,6 +32,5 @@
             &copy; Élaff Ramos | 2025
         </b>
     </footer>
-
   </body>
 </html>
